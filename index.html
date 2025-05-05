@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instituto Tecnológico Mecapaca</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #ca2626;
+      color: rgb(71, 31, 218);
+      padding: 20px;
+      text-align: center;
+    }
+    header .encabezado {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    header img.escudo {
+      height: 100px;
+    }
+    .carrusel {
+      width: 100%;
+      max-width: 800px;
+      height: 400px;
+      margin: 20px auto;
+      position: relative;
+      overflow: hidden;
+    }
+    .carrusel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+    .carrusel img.active {
+      display: block;
+    }
+    .carreras {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .carrera {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin: 10px;
+      width: 300px;
+      text-align: center;
+      padding: 15px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+    .carrera img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+    }
+    .carrera h3 {
+      margin: 10px 0;
+    }
+    .carrera a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: #006400;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="encabezado">
+    <img src="img/escudo.png" alt="Escudo del Instituto" class="escudo">
+    <div>
+      <h1>Instituto Tecnológico Mecapaca</h1>
+      <p>Formando profesionales del futuro</p>
+    </div>
+  </div>
+</header>
+
+<div class="carrusel">
+  <img src="img/carrera1.jpg" class="active" alt="Imagen 1">
+  <img src="img/carrera2.jpg" alt="Imagen 2">
+  <img src="img/carrera3.jpg" alt="Imagen 3">
+</div>
+
+<section class="carreras">
+  <div class="carrera">
+    <img src="img/mecanica.jpg" alt="Mecánica Automotriz">
+    <h3>Mecánica Automotriz</h3>
+    <a href="https://drive.google.com/uc?export=download&id=146iq0A8w_RIKDBi9dYYZJXRvaEJ0Cony" target="_blank">Descargar Malla Curricular</a>
+  </div>
+  <div class="carrera">
+    <img src="img/sistemas.jpg" alt="Sistemas Informáticos">
+    <h3>Sistemas Informáticos</h3>
+    <a href="https://drive.google.com/uc?export=download&id=1iHEkoRuJrls6tV9tAp7AUBPVQvRyY7pU" target="_blank">Descargar Malla Curricular</a>
+  </div>
+  <div class="carrera">
+    <img src="img/agropecuaria.jpg" alt="Agropecuaria">
+    <h3>Agropecuaria</h3>
+    <a href="https://drive.google.com/uc?export=download&id=1mxvOVbpo73f7nFzABuqr1FEF5zJVw-Y8" target="_blank">Descargar Malla Curricular</a>
+  </div>
+  <div class="carrera">
+    <img src="img/alimentos.jpg" alt="Industria de Alimentos">
+    <h3>Industria de Alimentos</h3>
+    <a href="https://drive.google.com/uc?export=download&id=1gAxBXsNLEHOkMZ4CSCHQXPAEiSqctbcB" target="_blank">Descargar Malla Curricular</a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Instituto Tecnológico Mecapaca - Todos los derechos reservados</p>
+</footer>
+
+<script>
+  // Carrusel simple
+  let currentIndex = 0;
+  const images = document.querySelectorAll(".carrusel img");
+
+  setInterval(() => {
+    images[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add("active");
+  }, 3000);
+</script>
+
+</body>
+</html>
+
